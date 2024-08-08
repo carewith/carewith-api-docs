@@ -1,0 +1,32 @@
+{
+  "info": {
+    "title": "Carewith API",
+    "description": "",
+    "version": "1.0.0-SNAPSHOT"
+  },
+  "servers": [
+    {
+      "url": "https://api.carewith.life",
+      "description": "production server"
+    },
+    {
+      "url": "http://localhost:8080",
+      "description": "local server"
+    }
+  ],
+  "authorize": {
+    "enable": true,
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ]
+  }
+}

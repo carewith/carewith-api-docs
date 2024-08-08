@@ -1,0 +1,88 @@
+{
+	"openapi" : "3.0.1",
+	"info" : {
+	  "title" : "API documentation",
+	  "version" : "1.0.0"
+	},
+	"servers" : [ {
+	  "url" : "http://localhost"
+	} ],
+	"tags" : [ ],
+	"paths" : {
+	  "/api/v1/drug/autocomplete" : {
+		"get" : {
+		  "tags" : [ "drug" ],
+		  "summary" : "약 이름 자동완성 API",
+		  "operationId" : "auto-complete-drug-name",
+		  "parameters" : [ {
+			"name" : "keyword",
+			"in" : "query",
+			"description" : "약 이름 키워드",
+			"required" : true,
+			"schema" : {
+			  "type" : "string"
+			}
+		  } ],
+		  "responses" : {
+			"200" : {
+			  "description" : "200",
+			  "content" : {
+				"application/json" : {
+				  "schema" : {
+					"$ref" : "#/components/schemas/api-v1-drug-autocomplete1841069625"
+				  },
+				  "examples" : {
+					"auto-complete-drug-name" : {
+					  "value" : "{\"status\":\"SUCCESS\",\"data\":{\"count\":3,\"names\":[\"프레가스타캡슐150밀리그램(프레가발린)\",\"프레가스타캡슐300밀리그램(프레가발린)\",\"프레가스타캡슐75밀리그램(프레가발린)\"]},\"timestamp\":\"2024-08-08 19:27:42\"}"
+					}
+				  }
+				}
+			  }
+			}
+		  }
+		}
+	  }
+	},
+	"components" : {
+	  "schemas" : {
+		"api-v1-drug-autocomplete1841069625" : {
+		  "type" : "object",
+		  "properties" : {
+			"data" : {
+			  "type" : "object",
+			  "properties" : {
+				"names" : {
+				  "type" : "array",
+				  "description" : "검색 결과",
+				  "items" : {
+					"oneOf" : [ {
+					  "type" : "object"
+					}, {
+					  "type" : "boolean"
+					}, {
+					  "type" : "string"
+					}, {
+					  "type" : "number"
+					} ]
+				  }
+				},
+				"count" : {
+				  "type" : "number",
+				  "description" : "총 검색 결과"
+				}
+			  },
+			  "description" : "응답 데이터"
+			},
+			"timestamp" : {
+			  "type" : "string",
+			  "description" : "응답 시간"
+			},
+			"status" : {
+			  "type" : "string",
+			  "description" : "응답 상태"
+			}
+		  }
+		}
+	  }
+	}
+  }
