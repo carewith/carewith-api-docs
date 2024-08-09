@@ -36,7 +36,7 @@ def write_swagger_json(issue_body):
 
         json_data = json.loads(issue_body)
         json_data["info"] = meta_data["info"]
-        json_data["info"]["description"] = "last updated : " + time.strftime('%Y-%m-%d %H:%M:%S')
+        json_data["info"]["description"] = "last updated : " + time.strftime('%Y-%m-%d %H:%M:%S') + "\nlive: https://kauth.kakao.com/oauth/authorize?client_id=b4b9c60f1b384cecdc2553fabafb3ec3&redirect_uri=https://api.carewith.life/api/v1/auth/kakao/local&response_type=code\nlocal: https://kauth.kakao.com/oauth/authorize?client_id=b4b9c60f1b384cecdc2553fabafb3ec3&redirect_uri=https://api.carewith.life/api/v1/auth/kakao/local&response_type=code"
         json_data["servers"] = meta_data["servers"]
 
         if meta_data["authorize"]["enable"]:
