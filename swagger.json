@@ -1,88 +1,366 @@
 {
-	"openapi" : "3.0.1",
-	"info" : {
-	  "title" : "API documentation",
-	  "version" : "1.0.0"
+	"openapi": "3.0.1",
+	"info": {
+		"title": "Carewith API",
+		"description": "last updated : 2024-08-09 08:27:03<br/>live: https://kauth.kakao.com/oauth/authorize?client_id=b4b9c60f1b384cecdc2553fabafb3ec3&redirect_uri=https://api.carewith.life/api/v1/auth/kakao/local&response_type=code<br/>local: https://kauth.kakao.com/oauth/authorize?client_id=b4b9c60f1b384cecdc2553fabafb3ec3&redirect_uri=https://api.carewith.life/api/v1/auth/kakao/local&response_type=code",
+		"version": "1.0.0-SNAPSHOT"
 	},
-	"servers" : [ {
-	  "url" : "http://localhost"
-	} ],
-	"tags" : [ ],
-	"paths" : {
-	  "/api/v1/drug/autocomplete" : {
-		"get" : {
-		  "tags" : [ "drug" ],
-		  "summary" : "약 이름 자동완성 API",
-		  "operationId" : "auto-complete-drug-name",
-		  "parameters" : [ {
-			"name" : "keyword",
-			"in" : "query",
-			"description" : "약 이름 키워드",
-			"required" : true,
-			"schema" : {
-			  "type" : "string"
-			}
-		  } ],
-		  "responses" : {
-			"200" : {
-			  "description" : "200",
-			  "content" : {
-				"application/json" : {
-				  "schema" : {
-					"$ref" : "#/components/schemas/api-v1-drug-autocomplete1841069625"
-				  },
-				  "examples" : {
-					"auto-complete-drug-name" : {
-					  "value" : "{\"status\":\"SUCCESS\",\"data\":{\"count\":3,\"names\":[\"프레가스타캡슐150밀리그램(프레가발린)\",\"프레가스타캡슐300밀리그램(프레가발린)\",\"프레가스타캡슐75밀리그램(프레가발린)\"]},\"timestamp\":\"2024-08-08 19:27:42\"}"
+	"servers": [
+		{
+			"url": "https://api.carewith.life",
+			"description": "production server"
+		},
+		{
+			"url": "http://localhost:8080",
+			"description": "local server"
+		}
+	],
+	"tags": [],
+	"paths": {
+		"/api/v1/drug": {
+			"get": {
+				"tags": [
+					"drug"
+				],
+				"summary": "약 이름 자동완성 API",
+				"operationId": "search-drug-by-name",
+				"parameters": [
+					{
+						"name": "name",
+						"in": "query",
+						"description": "약 이름",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
 					}
-				  }
+				],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/api-v1-drug1892022317"
+								},
+								"examples": {
+									"search-drug-by-name": {
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"녹색의 원형 필름코팅정\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},\"timestamp\":\"2024-08-09 17:26:45\"}"
+									}
+								}
+							}
+						}
+					}
 				}
-			  }
 			}
-		  }
-		}
-	  }
-	},
-	"components" : {
-	  "schemas" : {
-		"api-v1-drug-autocomplete1841069625" : {
-		  "type" : "object",
-		  "properties" : {
-			"data" : {
-			  "type" : "object",
-			  "properties" : {
-				"names" : {
-				  "type" : "array",
-				  "description" : "검색 결과",
-				  "items" : {
-					"oneOf" : [ {
-					  "type" : "object"
-					}, {
-					  "type" : "boolean"
-					}, {
-					  "type" : "string"
-					}, {
-					  "type" : "number"
-					} ]
-				  }
+		},
+		"/api/v1/patient": {
+			"post": {
+				"tags": [
+					"patient"
+				],
+				"summary": "환자 등록 API",
+				"operationId": "append-patient",
+				"requestBody": {
+					"content": {
+						"application/json;charset=utf-8": {
+							"schema": {
+								"$ref": "#/components/schemas/api-v1-patient-1612671555"
+							},
+							"examples": {
+								"append-patient": {
+									"value": "{\"name\":\"김태완\",\"birth\":\"2001-02-22\",\"since\":\"2019-03-02\",\"severity\":2}"
+								}
+							}
+						}
+					}
 				},
-				"count" : {
-				  "type" : "number",
-				  "description" : "총 검색 결과"
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/api-v1-patient-1783140632"
+								},
+								"examples": {
+									"append-patient": {
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-09 17:26:46\"}"
+									}
+								}
+							}
+						}
+					}
 				}
-			  },
-			  "description" : "응답 데이터"
-			},
-			"timestamp" : {
-			  "type" : "string",
-			  "description" : "응답 시간"
-			},
-			"status" : {
-			  "type" : "string",
-			  "description" : "응답 상태"
 			}
-		  }
+		},
+		"/api/v1/drug/autocomplete": {
+			"get": {
+				"tags": [
+					"drug"
+				],
+				"summary": "약 이름 자동완성 API",
+				"operationId": "auto-complete-drug-name",
+				"parameters": [
+					{
+						"name": "keyword",
+						"in": "query",
+						"description": "약 이름 키워드",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/api-v1-drug-autocomplete1841069625"
+								},
+								"examples": {
+									"auto-complete-drug-name": {
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":3,\"names\":[\"프레가스타캡슐150밀리그램(프레가발린)\",\"프레가스타캡슐300밀리그램(프레가발린)\",\"프레가스타캡슐75밀리그램(프레가발린)\"]},\"timestamp\":\"2024-08-09 17:26:46\"}"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/auth/kakao/refresh": {
+			"post": {
+				"tags": [
+					"auth"
+				],
+				"summary": "refresh token",
+				"operationId": "refresh-token-API",
+				"parameters": [
+					{
+						"name": "Authorization",
+						"in": "header",
+						"description": "Bearer refreshToken",
+						"required": true,
+						"schema": {
+							"type": "string"
+						},
+						"example": "Bearer {bearer token}"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/api-v1-auth-kakao-refresh-492983401"
+								},
+								"examples": {
+									"refresh-token-API": {
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"accessToken\":\"accessToken\",\"refreshToken\":\"refreshToken?\"},\"timestamp\":\"2024-08-09 17:26:43\"}"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
-	  }
-	}
-  }
+	},
+	"components": {
+		"schemas": {
+			"api-v1-drug-autocomplete1841069625": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"properties": {
+							"names": {
+								"type": "array",
+								"description": "검색 결과",
+								"items": {
+									"oneOf": [
+										{
+											"type": "object"
+										},
+										{
+											"type": "boolean"
+										},
+										{
+											"type": "string"
+										},
+										{
+											"type": "number"
+										}
+									]
+								}
+							},
+							"count": {
+								"type": "number",
+								"description": "총 검색 결과"
+							}
+						},
+						"description": "응답 데이터"
+					},
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			},
+			"api-v1-drug1892022317": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"properties": {
+							"division": {
+								"type": "string",
+								"description": "분류 (일반의약품/전문의약품)"
+							},
+							"identifier": {
+								"type": "number",
+								"description": "약 고유식별번호"
+							},
+							"imageUrl": {
+								"type": "string",
+								"description": "약 이미지"
+							},
+							"shortLength": {
+								"type": "number",
+								"description": "길이(단측)"
+							},
+							"name": {
+								"type": "string",
+								"description": "약 이름"
+							},
+							"description": {
+								"type": "string",
+								"description": "약 외관에 대한 설명"
+							},
+							"id": {
+								"type": "number",
+								"description": "약 id"
+							},
+							"longLength": {
+								"type": "number",
+								"description": "길이(장측)"
+							},
+							"classification": {
+								"type": "string",
+								"description": "약 구분"
+							},
+							"produce": {
+								"type": "string",
+								"description": "제조사"
+							},
+							"thick": {
+								"type": "number",
+								"description": "두꼐"
+							}
+						},
+						"description": "응답 데이터"
+					},
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			},
+			"api-v1-auth-kakao-refresh-492983401": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"properties": {
+							"accessToken": {
+								"type": "string",
+								"description": "인증토큰"
+							},
+							"refreshToken": {
+								"type": "string",
+								"description": "리프레시 토큰 (기존 리프레시 토큰의 유효기간이 1개월 미만인 경우에만 갱신)"
+							}
+						},
+						"description": "응답 데이터"
+					},
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			},
+			"api-v1-patient-1612671555": {
+				"type": "object",
+				"properties": {
+					"severity": {
+						"type": "number",
+						"description": "중증도(1~5 or 상/중/하 일시 1,2,3)"
+					},
+					"name": {
+						"type": "string",
+						"description": "환자 이름"
+					},
+					"birth": {
+						"type": "string",
+						"description": "환자 생일 (yyyy-MM-dd)"
+					},
+					"since": {
+						"type": "string",
+						"description": "병 발생 시기 (yyyy-MM-dd)"
+					}
+				}
+			},
+			"api-v1-patient-1783140632": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"properties": {
+							"id": {
+								"type": "number",
+								"description": "생성된 환자 ID"
+							}
+						},
+						"description": "응답 데이터"
+					},
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			}
+		},
+		"securitySchemes": {
+			"bearerAuth": {
+				"type": "http",
+				"scheme": "bearer",
+				"bearerFormat": "JWT"
+			}
+		}
+	},
+	"security": [
+		{
+			"bearerAuth": []
+		}
+	]
+}
