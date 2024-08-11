@@ -2,7 +2,7 @@
 	"openapi": "3.0.1",
 	"info": {
 		"title": "Carewith API",
-		"description": "last updated : 2024-08-11 13:00:14<br/>live: https://kauth.kakao.com/oauth/authorize?client_id=b4b9c60f1b384cecdc2553fabafb3ec3&redirect_uri=https://api.carewith.life/api/v1/auth/kakao/local&response_type=code<br/>local: https://kauth.kakao.com/oauth/authorize?client_id=b4b9c60f1b384cecdc2553fabafb3ec3&redirect_uri=https://api.carewith.life/api/v1/auth/kakao/local&response_type=code",
+		"description": "last updated : 2024-08-11 15:43:37<br/>live: https://kauth.kakao.com/oauth/authorize?client_id=b4b9c60f1b384cecdc2553fabafb3ec3&redirect_uri=https://api.carewith.life/api/v1/auth/kakao/local&response_type=code<br/>local: https://kauth.kakao.com/oauth/authorize?client_id=b4b9c60f1b384cecdc2553fabafb3ec3&redirect_uri=https://api.carewith.life/api/v1/auth/kakao/local&response_type=code",
 		"version": "1.0.0-SNAPSHOT"
 	},
 	"servers": [
@@ -48,7 +48,45 @@
 								},
 								"examples": {
 									"append-cartridge": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 21:59:48\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-12 00:43:12\"}"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/dispenser": {
+			"get": {
+				"tags": [
+					"dispenser"
+				],
+				"summary": "디스펜서 목록 조회 API",
+				"operationId": "read-dispensers",
+				"parameters": [
+					{
+						"name": "Authorization",
+						"in": "header",
+						"description": "인증토큰",
+						"required": true,
+						"schema": {
+							"type": "string"
+						},
+						"example": "Bearer {bearer token}"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/api-v1-dispenser940190644"
+								},
+								"examples": {
+									"read-dispensers": {
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"dispensers\":[{\"dispenserId\":\"MGE2NGZ\",\"status\":\"MAIN\"},{\"dispenserId\":\"IF24KD\",\"status\":\"SUB\"}]},\"timestamp\":\"2024-08-12 00:43:13\"}"
 									}
 								}
 							}
@@ -85,7 +123,7 @@
 								},
 								"examples": {
 									"search-drug-by-name": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"녹색의 원형 필름코팅정\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},\"timestamp\":\"2024-08-11 21:59:49\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"녹색의 원형 필름코팅정\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},\"timestamp\":\"2024-08-12 00:43:14\"}"
 									}
 								}
 							}
@@ -105,7 +143,7 @@
 					"content": {
 						"application/json;charset=utf-8": {
 							"schema": {
-								"$ref": "#/components/schemas/api-v1-patient-272837857"
+								"$ref": "#/components/schemas/api-v1-patient-patientId-272837857"
 							},
 							"examples": {
 								"append-patient": {
@@ -125,7 +163,7 @@
 								},
 								"examples": {
 									"append-patient": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 21:59:51\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-12 00:43:16\"}"
 									}
 								}
 							}
@@ -164,7 +202,7 @@
 								},
 								"examples": {
 									"all-reminder-sounds": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"sounds\":[{\"id\":1,\"name\":\"기본 알림음\",\"url\":\"url\"},{\"id\":2,\"name\":\"커스텀 알림음\",\"url\":\"url\"}]},\"timestamp\":\"2024-08-11 21:59:53\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"sounds\":[{\"id\":1,\"name\":\"기본 알림음\",\"url\":\"url\"},{\"id\":2,\"name\":\"커스텀 알림음\",\"url\":\"url\"}]},\"timestamp\":\"2024-08-12 00:43:17\"}"
 									}
 								}
 							}
@@ -202,7 +240,7 @@
 								},
 								"examples": {
 									"read-user": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"name\":\"김태완\",\"profileImage\":\"profileImage\"},\"timestamp\":\"2024-08-11 21:59:53\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"name\":\"김태완\",\"profileImage\":\"profileImage\"},\"timestamp\":\"2024-08-12 00:43:18\"}"
 									}
 								}
 							}
@@ -242,7 +280,7 @@
 								},
 								"examples": {
 									"append-cartridge-reminder-schedule": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 21:59:47\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-12 00:43:12\"}"
 									}
 								}
 							}
@@ -279,7 +317,7 @@
 								},
 								"examples": {
 									"remove-cartridges": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":null,\"timestamp\":\"2024-08-11 21:59:47\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":null,\"timestamp\":\"2024-08-12 00:43:12\"}"
 									}
 								}
 							}
@@ -328,7 +366,7 @@
 								},
 								"examples": {
 									"modify-cartridge": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 21:59:47\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-12 00:43:11\"}"
 									}
 								}
 							}
@@ -351,11 +389,49 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-dispenser-id-1846498768"
+									"$ref": "#/components/schemas/api-v1-dispenser-dispenserId-1846498768"
 								},
 								"examples": {
 									"generate-dispenser-id": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":\"MGE2NGZ\"},\"timestamp\":\"2024-08-11 21:59:49\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":\"MGE2NGZ\"},\"timestamp\":\"2024-08-12 00:43:13\"}"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/dispenser/main": {
+			"get": {
+				"tags": [
+					"dispenser"
+				],
+				"summary": "메인 디스펜서 조회 API",
+				"operationId": "read-main-dispenser",
+				"parameters": [
+					{
+						"name": "Authorization",
+						"in": "header",
+						"description": "인증토큰",
+						"required": true,
+						"schema": {
+							"type": "string"
+						},
+						"example": "Bearer {bearer token}"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/api-v1-dispenser-main-754956385"
+								},
+								"examples": {
+									"read-main-dispenser": {
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"dispenserId\":\"MGE2NGZ\",\"status\":\"MAIN\"},\"timestamp\":\"2024-08-12 00:43:13\"}"
 									}
 								}
 							}
@@ -370,7 +446,7 @@
 					"dispenser"
 				],
 				"summary": "디스펜서 등록 API",
-				"description": "입력한 dispenserId로 id가 설정됩니다.",
+				"description": "입력한 dispenserId로 id가 설정됩니다. 이전에 main 디스펜서가 없으면 main으로, 없으면 sub로 설정",
 				"operationId": "register-dispenser",
 				"parameters": [
 					{
@@ -413,11 +489,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-dispenser-id-1846498768"
+									"$ref": "#/components/schemas/api-v1-dispenser-dispenserId-1846498768"
 								},
 								"examples": {
 									"register-dispenser": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":\"MGE2NGZ\"},\"timestamp\":\"2024-08-11 21:59:49\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":\"MGE2NGZ\"},\"timestamp\":\"2024-08-12 00:43:13\"}"
 									}
 								}
 							}
@@ -459,11 +535,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-drug-all646786864"
+									"$ref": "#/components/schemas/api-v1-drug-all-keyword646786864"
 								},
 								"examples": {
 									"all-drug": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"drugs\":[{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"어두운 황색의 원형 필름코팅정\",\"classification\":\"항악성종양제\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},{\"id\":2,\"name\":\"페라트라정2.5밀리그램(레트로졸)\",\"identifier\":200808877,\"produce\":\"(주)유한양행\",\"description\":\"녹색의 원형 필름코팅정\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":6.1,\"shortLength\":6.1,\"thick\":3.5,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300107\"}]},\"timestamp\":\"2024-08-11 21:59:50\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"drugs\":[{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"어두운 황색의 원형 필름코팅정\",\"classification\":\"항악성종양제\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},{\"id\":2,\"name\":\"페라트라정2.5밀리그램(레트로졸)\",\"identifier\":200808877,\"produce\":\"(주)유한양행\",\"description\":\"녹색의 원형 필름코팅정\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":6.1,\"shortLength\":6.1,\"thick\":3.5,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300107\"}]},\"timestamp\":\"2024-08-12 00:43:14\"}"
 									}
 								}
 							}
@@ -500,7 +576,7 @@
 								},
 								"examples": {
 									"auto-complete-drug-name": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":3,\"names\":[\"프레가스타캡슐150밀리그램(프레가발린)\",\"프레가스타캡슐300밀리그램(프레가발린)\",\"프레가스타캡슐75밀리그램(프레가발린)\"]},\"timestamp\":\"2024-08-11 21:59:50\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":3,\"names\":[\"프레가스타캡슐150밀리그램(프레가발린)\",\"프레가스타캡슐300밀리그램(프레가발린)\",\"프레가스타캡슐75밀리그램(프레가발린)\"]},\"timestamp\":\"2024-08-12 00:43:14\"}"
 									}
 								}
 							}
@@ -551,7 +627,7 @@
 								},
 								"examples": {
 									"read-patient": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1,\"name\":\"김태완\",\"birth\":\"2001-02-22\",\"diseaseName\":\"알츠하이머\",\"since\":\"2019-03-02\",\"severity\":2},\"timestamp\":\"2024-08-11 21:59:51\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1,\"name\":\"김태완\",\"birth\":\"2001-02-22\",\"diseaseName\":\"알츠하이머\",\"since\":\"2019-03-02\",\"severity\":2},\"timestamp\":\"2024-08-12 00:43:16\"}"
 									}
 								}
 							}
@@ -580,7 +656,7 @@
 					"content": {
 						"application/json;charset=utf-8": {
 							"schema": {
-								"$ref": "#/components/schemas/api-v1-patient-272837857"
+								"$ref": "#/components/schemas/api-v1-patient-patientId-272837857"
 							},
 							"examples": {
 								"modify-patient": {
@@ -600,7 +676,7 @@
 								},
 								"examples": {
 									"modify-patient": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 21:59:51\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-12 00:43:16\"}"
 									}
 								}
 							}
@@ -638,7 +714,7 @@
 								},
 								"examples": {
 									"read-user-name": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"name\":\"김태완\"},\"timestamp\":\"2024-08-11 21:59:53\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"name\":\"김태완\"},\"timestamp\":\"2024-08-12 00:43:18\"}"
 									}
 								}
 							}
@@ -676,7 +752,7 @@
 								},
 								"examples": {
 									"refresh-token-API": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"accessToken\":\"accessToken\",\"refreshToken\":\"refreshToken?\"},\"timestamp\":\"2024-08-11 21:59:45\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"accessToken\":\"accessToken\",\"refreshToken\":\"refreshToken?\"},\"timestamp\":\"2024-08-12 00:43:09\"}"
 									}
 								}
 							}
@@ -713,7 +789,7 @@
 								},
 								"examples": {
 									"using-cartridges": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"usingNumbers\":[1,3,4]},\"timestamp\":\"2024-08-11 21:59:48\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"usingNumbers\":[1,3,4]},\"timestamp\":\"2024-08-12 00:43:12\"}"
 									}
 								}
 							}
@@ -764,7 +840,7 @@
 								},
 								"examples": {
 									"append-reminders": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 21:59:52\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-12 00:43:17\"}"
 									}
 								}
 							}
@@ -799,7 +875,7 @@
 								},
 								"examples": {
 									"remove-reminders": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 21:59:52\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-12 00:43:17\"}"
 									}
 								}
 							}
@@ -848,7 +924,7 @@
 								},
 								"examples": {
 									"replace-reminders": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 21:59:52\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-12 00:43:17\"}"
 									}
 								}
 							}
@@ -899,7 +975,54 @@
 								},
 								"examples": {
 									"modify-cartridge-reminder-schedule": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 21:59:47\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-12 00:43:12\"}"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/dispenser/main/{dispenserId}": {
+			"patch": {
+				"tags": [
+					"dispenser"
+				],
+				"summary": "메인 디스펜서 교체 API",
+				"operationId": "change-main-dispenser",
+				"parameters": [
+					{
+						"name": "dispenserId",
+						"in": "path",
+						"description": "등록하려는 디스펜서 ID",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"name": "Authorization",
+						"in": "header",
+						"description": "인증토큰",
+						"required": true,
+						"schema": {
+							"type": "string"
+						},
+						"example": "Bearer {bearer token}"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/api-v1-dispenser-main-dispenserId-687781852"
+								},
+								"examples": {
+									"change-main-dispenser": {
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":\"IF24KD\"},\"timestamp\":\"2024-08-12 00:43:13\"}"
 									}
 								}
 							}
@@ -932,11 +1055,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-drug-all646786864"
+									"$ref": "#/components/schemas/api-v1-drug-all-keyword646786864"
 								},
 								"examples": {
 									"all-drug-by-keyword": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"drugs\":[{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"어두운 황색의 원형 필름코팅정\",\"classification\":\"항악성종양제\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},{\"id\":4,\"name\":\"가스프렌정(모사프리드시트르산염이수화물)\",\"identifier\":200809076,\"produce\":\"경동제약(주)\",\"description\":\"분할선을 가진 흰색의 장방형 필름코팅정제\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":9.1,\"shortLength\":4.5,\"thick\":3.4,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300143\"}]},\"timestamp\":\"2024-08-11 21:59:50\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"drugs\":[{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"어두운 황색의 원형 필름코팅정\",\"classification\":\"항악성종양제\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},{\"id\":4,\"name\":\"가스프렌정(모사프리드시트르산염이수화물)\",\"identifier\":200809076,\"produce\":\"경동제약(주)\",\"description\":\"분할선을 가진 흰색의 장방형 필름코팅정제\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":9.1,\"shortLength\":4.5,\"thick\":3.4,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300143\"}]},\"timestamp\":\"2024-08-12 00:43:14\"}"
 									}
 								}
 							}
@@ -987,7 +1110,7 @@
 								},
 								"examples": {
 									"drug-combinable-check": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"isCombinable\":true,\"caution\":\"주의사항\"},\"timestamp\":\"2024-08-11 21:59:50\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"isCombinable\":true,\"caution\":\"주의사항\"},\"timestamp\":\"2024-08-12 00:43:15\"}"
 									}
 								}
 							}
@@ -1038,7 +1161,7 @@
 								},
 								"examples": {
 									"read-patient-by-dispenser-id": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1,\"name\":\"김태완\",\"birth\":\"2001-02-22\",\"diseaseName\":\"알츠하이머\",\"since\":\"2019-03-02\",\"severity\":2},\"timestamp\":\"2024-08-11 21:59:51\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1,\"name\":\"김태완\",\"birth\":\"2001-02-22\",\"diseaseName\":\"알츠하이머\",\"since\":\"2019-03-02\",\"severity\":2},\"timestamp\":\"2024-08-12 00:43:16\"}"
 									}
 								}
 							}
@@ -1050,7 +1173,7 @@
 	},
 	"components": {
 		"schemas": {
-			"api-v1-dispenser-id-1846498768": {
+			"api-v1-dispenser-dispenserId-1846498768": {
 				"type": "object",
 				"properties": {
 					"data": {
@@ -1368,7 +1491,33 @@
 			"api-v1-patient-dispenser-dispenserId486549215": {
 				"type": "object"
 			},
-			"api-v1-patient-272837857": {
+			"api-v1-dispenser-main-754956385": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"properties": {
+							"dispenserId": {
+								"type": "string",
+								"description": "디스펜서 ID"
+							},
+							"status": {
+								"type": "string",
+								"description": "디스펜서 상태 (MAIN, SUB)"
+							}
+						}
+					},
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			},
+			"api-v1-patient-patientId-272837857": {
 				"type": "object",
 				"properties": {
 					"severity": {
@@ -1393,6 +1542,15 @@
 					}
 				}
 			},
+			"api-v1-dispenser-dispenserId-1160846675": {
+				"type": "object",
+				"properties": {
+					"patientId": {
+						"type": "number",
+						"description": "환자 ID"
+					}
+				}
+			},
 			"api-v1-patient-637801896": {
 				"type": "object",
 				"properties": {
@@ -1412,15 +1570,6 @@
 					"status": {
 						"type": "string",
 						"description": "응답 상태"
-					}
-				}
-			},
-			"api-v1-dispenser-dispenserId-1160846675": {
-				"type": "object",
-				"properties": {
-					"patientId": {
-						"type": "number",
-						"description": "환자 ID"
 					}
 				}
 			},
@@ -1528,6 +1677,28 @@
 					}
 				}
 			},
+			"api-v1-patient-patientId370834879": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"properties": {
+							"id": {
+								"type": "number",
+								"description": "수정된 환자 ID"
+							}
+						}
+					},
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			},
 			"api-v1-cartridge916321208": {
 				"type": "object",
 				"properties": {
@@ -1550,15 +1721,15 @@
 					}
 				}
 			},
-			"api-v1-patient-patientId370834879": {
+			"api-v1-dispenser-main-dispenserId-687781852": {
 				"type": "object",
 				"properties": {
 					"data": {
 						"type": "object",
 						"properties": {
 							"id": {
-								"type": "number",
-								"description": "수정된 환자 ID"
+								"type": "string",
+								"description": "교체된 메인 디스펜서 ID"
 							}
 						}
 					},
@@ -1822,7 +1993,7 @@
 					}
 				}
 			},
-			"api-v1-drug-all646786864": {
+			"api-v1-drug-all-keyword646786864": {
 				"type": "object",
 				"properties": {
 					"data": {
@@ -1883,6 +2054,44 @@
 							"count": {
 								"type": "number",
 								"description": "검색 약 수"
+							}
+						}
+					},
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			},
+			"api-v1-dispenser940190644": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"properties": {
+							"count": {
+								"type": "number",
+								"description": "목록 갯수"
+							},
+							"dispensers": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"dispenserId": {
+											"type": "string",
+											"description": "디스펜서 ID"
+										},
+										"status": {
+											"type": "string",
+											"description": "디스펜서 상태 (MAIN, SUB)"
+										}
+									}
+								}
 							}
 						}
 					},
