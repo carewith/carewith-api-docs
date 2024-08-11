@@ -2,7 +2,7 @@
 	"openapi": "3.0.1",
 	"info": {
 		"title": "Carewith API",
-		"description": "last updated : 2024-08-11 10:41:18<br/>live: https://kauth.kakao.com/oauth/authorize?client_id=b4b9c60f1b384cecdc2553fabafb3ec3&redirect_uri=https://api.carewith.life/api/v1/auth/kakao/local&response_type=code<br/>local: https://kauth.kakao.com/oauth/authorize?client_id=b4b9c60f1b384cecdc2553fabafb3ec3&redirect_uri=https://api.carewith.life/api/v1/auth/kakao/local&response_type=code",
+		"description": "last updated : 2024-08-11 11:22:06<br/>live: https://kauth.kakao.com/oauth/authorize?client_id=b4b9c60f1b384cecdc2553fabafb3ec3&redirect_uri=https://api.carewith.life/api/v1/auth/kakao/local&response_type=code<br/>local: https://kauth.kakao.com/oauth/authorize?client_id=b4b9c60f1b384cecdc2553fabafb3ec3&redirect_uri=https://api.carewith.life/api/v1/auth/kakao/local&response_type=code",
 		"version": "1.0.0-SNAPSHOT"
 	},
 	"servers": [
@@ -44,11 +44,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-cartridge-1152882744"
+									"$ref": "#/components/schemas/api-v1-cartridge916321208"
 								},
 								"examples": {
 									"append-cartridge": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 19:40:54\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 20:21:44\"}"
 									}
 								}
 							}
@@ -81,11 +81,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-drug1892022317"
+									"$ref": "#/components/schemas/api-v1-drug2071534301"
 								},
 								"examples": {
 									"search-drug-by-name": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"녹색의 원형 필름코팅정\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},\"timestamp\":\"2024-08-11 19:40:56\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"녹색의 원형 필름코팅정\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},\"timestamp\":\"2024-08-11 20:21:45\"}"
 									}
 								}
 							}
@@ -121,11 +121,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-patient-1783140632"
+									"$ref": "#/components/schemas/api-v1-patient-637801896"
 								},
 								"examples": {
 									"append-patient": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 19:40:58\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 20:21:47\"}"
 									}
 								}
 							}
@@ -160,11 +160,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-sound-1851372595"
+									"$ref": "#/components/schemas/api-v1-sound-1671860611"
 								},
 								"examples": {
 									"all-reminder-sounds": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"sounds\":[{\"id\":1,\"name\":\"기본 알림음\",\"url\":\"url\"},{\"id\":2,\"name\":\"커스텀 알림음\",\"url\":\"url\"}]},\"timestamp\":\"2024-08-11 19:40:59\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"sounds\":[{\"id\":1,\"name\":\"기본 알림음\",\"url\":\"url\"},{\"id\":2,\"name\":\"커스텀 알림음\",\"url\":\"url\"}]},\"timestamp\":\"2024-08-11 20:21:48\"}"
 									}
 								}
 							}
@@ -198,11 +198,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-user-994780844"
+									"$ref": "#/components/schemas/api-v1-user-1258169084"
 								},
 								"examples": {
 									"read-user": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"name\":\"김태완\",\"profileImage\":\"profileImage\"},\"timestamp\":\"2024-08-11 19:41:00\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"name\":\"김태완\",\"profileImage\":\"profileImage\"},\"timestamp\":\"2024-08-11 20:21:49\"}"
 									}
 								}
 							}
@@ -238,11 +238,48 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-cartridge-1152882744"
+									"$ref": "#/components/schemas/api-v1-cartridge916321208"
 								},
 								"examples": {
 									"append-cartridge-reminder-schedule": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 19:40:54\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 20:21:43\"}"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/cartridge/{cartridgeId}": {
+			"delete": {
+				"tags": [
+					"cartridge"
+				],
+				"summary": "카트리지 삭제 API",
+				"operationId": "remove-cartridges",
+				"parameters": [
+					{
+						"name": "cartridgeId",
+						"in": "path",
+						"description": "삭제하려는 카트리지 Id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/api-v1-cartridge-cartridgeId-1776866862"
+								},
+								"examples": {
+									"remove-cartridges": {
+										"value": "{\"status\":\"SUCCESS\",\"data\":null,\"timestamp\":\"2024-08-11 20:21:43\"}"
 									}
 								}
 							}
@@ -265,11 +302,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-dispenser-id379264576"
+									"$ref": "#/components/schemas/api-v1-dispenser-dispenserId-1846498768"
 								},
 								"examples": {
 									"generate-dispenser-id": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":\"MGE2NGZ\"},\"timestamp\":\"2024-08-11 19:40:55\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":\"MGE2NGZ\"},\"timestamp\":\"2024-08-11 20:21:44\"}"
 									}
 								}
 							}
@@ -327,11 +364,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-dispenser-id379264576"
+									"$ref": "#/components/schemas/api-v1-dispenser-dispenserId-1846498768"
 								},
 								"examples": {
 									"register-dispenser": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":\"MGE2NGZ\"},\"timestamp\":\"2024-08-11 19:40:55\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":\"MGE2NGZ\"},\"timestamp\":\"2024-08-11 20:21:44\"}"
 									}
 								}
 							}
@@ -373,11 +410,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-drug-all-1699241152"
+									"$ref": "#/components/schemas/api-v1-drug-all646786864"
 								},
 								"examples": {
 									"all-drug": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"drugs\":[{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"어두운 황색의 원형 필름코팅정\",\"classification\":\"항악성종양제\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},{\"id\":2,\"name\":\"페라트라정2.5밀리그램(레트로졸)\",\"identifier\":200808877,\"produce\":\"(주)유한양행\",\"description\":\"녹색의 원형 필름코팅정\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":6.1,\"shortLength\":6.1,\"thick\":3.5,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300107\"}]},\"timestamp\":\"2024-08-11 19:40:56\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"drugs\":[{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"어두운 황색의 원형 필름코팅정\",\"classification\":\"항악성종양제\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},{\"id\":2,\"name\":\"페라트라정2.5밀리그램(레트로졸)\",\"identifier\":200808877,\"produce\":\"(주)유한양행\",\"description\":\"녹색의 원형 필름코팅정\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":6.1,\"shortLength\":6.1,\"thick\":3.5,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300107\"}]},\"timestamp\":\"2024-08-11 20:21:45\"}"
 									}
 								}
 							}
@@ -410,11 +447,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-drug-autocomplete1841069625"
+									"$ref": "#/components/schemas/api-v1-drug-autocomplete-1131437847"
 								},
 								"examples": {
 									"auto-complete-drug-name": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":3,\"names\":[\"프레가스타캡슐150밀리그램(프레가발린)\",\"프레가스타캡슐300밀리그램(프레가발린)\",\"프레가스타캡슐75밀리그램(프레가발린)\"]},\"timestamp\":\"2024-08-11 19:40:56\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":3,\"names\":[\"프레가스타캡슐150밀리그램(프레가발린)\",\"프레가스타캡슐300밀리그램(프레가발린)\",\"프레가스타캡슐75밀리그램(프레가발린)\"]},\"timestamp\":\"2024-08-11 20:21:46\"}"
 									}
 								}
 							}
@@ -448,11 +485,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-user-name-852606423"
+									"$ref": "#/components/schemas/api-v1-user-name-1490293479"
 								},
 								"examples": {
 									"read-user-name": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"name\":\"김태완\"},\"timestamp\":\"2024-08-11 19:41:00\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"name\":\"김태완\"},\"timestamp\":\"2024-08-11 20:21:49\"}"
 									}
 								}
 							}
@@ -486,11 +523,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-auth-kakao-refresh-492983401"
+									"$ref": "#/components/schemas/api-v1-auth-kakao-refresh829476423"
 								},
 								"examples": {
 									"refresh-token-API": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"accessToken\":\"accessToken\",\"refreshToken\":\"refreshToken?\"},\"timestamp\":\"2024-08-11 19:40:51\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"accessToken\":\"accessToken\",\"refreshToken\":\"refreshToken?\"},\"timestamp\":\"2024-08-11 20:21:41\"}"
 									}
 								}
 							}
@@ -523,11 +560,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-cartridge-using-dispenserId2094811716"
+									"$ref": "#/components/schemas/api-v1-cartridge-using-dispenserId1293555252"
 								},
 								"examples": {
 									"using-cartridges": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"usingNumbers\":[1,3,4]},\"timestamp\":\"2024-08-11 19:40:54\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"usingNumbers\":[1,3,4]},\"timestamp\":\"2024-08-11 20:21:44\"}"
 									}
 								}
 							}
@@ -574,11 +611,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-cartridge-cartridgeId-reminder1153274528"
+									"$ref": "#/components/schemas/api-v1-cartridge-cartridgeId-reminder-1719529968"
 								},
 								"examples": {
 									"append-reminders": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 19:40:58\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 20:21:48\"}"
 									}
 								}
 							}
@@ -590,7 +627,7 @@
 				"tags": [
 					"reminder"
 				],
-				"summary": "알람 재설정 API",
+				"summary": "모든 알람 삭제 API",
 				"operationId": "remove-reminders",
 				"parameters": [
 					{
@@ -609,11 +646,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-cartridge-cartridgeId-reminder-980142035"
+									"$ref": "#/components/schemas/api-v1-cartridge-cartridgeId-reminder-800630051"
 								},
 								"examples": {
 									"remove-reminders": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 19:40:58\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 20:21:48\"}"
 									}
 								}
 							}
@@ -658,11 +695,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-cartridge-cartridgeId-reminder1153274528"
+									"$ref": "#/components/schemas/api-v1-cartridge-cartridgeId-reminder-1719529968"
 								},
 								"examples": {
 									"replace-reminders": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 19:40:58\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-11 20:21:48\"}"
 									}
 								}
 							}
@@ -695,11 +732,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-drug-all-1699241152"
+									"$ref": "#/components/schemas/api-v1-drug-all646786864"
 								},
 								"examples": {
 									"all-drug-by-keyword": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"drugs\":[{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"어두운 황색의 원형 필름코팅정\",\"classification\":\"항악성종양제\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},{\"id\":4,\"name\":\"가스프렌정(모사프리드시트르산염이수화물)\",\"identifier\":200809076,\"produce\":\"경동제약(주)\",\"description\":\"분할선을 가진 흰색의 장방형 필름코팅정제\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":9.1,\"shortLength\":4.5,\"thick\":3.4,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300143\"}]},\"timestamp\":\"2024-08-11 19:40:56\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"drugs\":[{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"어두운 황색의 원형 필름코팅정\",\"classification\":\"항악성종양제\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},{\"id\":4,\"name\":\"가스프렌정(모사프리드시트르산염이수화물)\",\"identifier\":200809076,\"produce\":\"경동제약(주)\",\"description\":\"분할선을 가진 흰색의 장방형 필름코팅정제\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":9.1,\"shortLength\":4.5,\"thick\":3.4,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300143\"}]},\"timestamp\":\"2024-08-11 20:21:46\"}"
 									}
 								}
 							}
@@ -746,11 +783,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-drug-check-dispenserId-434786642"
+									"$ref": "#/components/schemas/api-v1-drug-check-dispenserId-1700343202"
 								},
 								"examples": {
 									"drug-combinable-check": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"isCombinable\":true,\"caution\":\"주의사항\"},\"timestamp\":\"2024-08-11 19:40:57\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"isCombinable\":true,\"caution\":\"주의사항\"},\"timestamp\":\"2024-08-11 20:21:46\"}"
 									}
 								}
 							}
@@ -762,56 +799,6 @@
 	},
 	"components": {
 		"schemas": {
-			"api-v1-user-994780844": {
-				"type": "object",
-				"properties": {
-					"data": {
-						"type": "object",
-						"properties": {
-							"name": {
-								"type": "string",
-								"description": "이름"
-							},
-							"profileImage": {
-								"type": "string",
-								"description": "프로필 이미지"
-							}
-						},
-						"description": "응답 데이터"
-					},
-					"timestamp": {
-						"type": "string",
-						"description": "응답 시간"
-					},
-					"status": {
-						"type": "string",
-						"description": "응답 상태"
-					}
-				}
-			},
-			"api-v1-cartridge-1152882744": {
-				"type": "object",
-				"properties": {
-					"data": {
-						"type": "object",
-						"properties": {
-							"id": {
-								"type": "number",
-								"description": "생성된 카트리지 ID"
-							}
-						},
-						"description": "응답 데이터"
-					},
-					"timestamp": {
-						"type": "string",
-						"description": "응답 시간"
-					},
-					"status": {
-						"type": "string",
-						"description": "응답 상태"
-					}
-				}
-			},
 			"api-v1-cartridge-schedule-2116590121": {
 				"type": "object",
 				"properties": {
@@ -873,6 +860,37 @@
 					}
 				}
 			},
+			"api-v1-dispenser-dispenserId-1846498768": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"properties": {
+							"id": {
+								"type": "string",
+								"description": "디스펜서 ID"
+							}
+						}
+					},
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			},
+			"api-v1-dispenser-dispenserId-1160846675": {
+				"type": "object",
+				"properties": {
+					"patientId": {
+						"type": "number",
+						"description": "환자 ID"
+					}
+				}
+			},
 			"api-v1-patient-272837857": {
 				"type": "object",
 				"properties": {
@@ -898,68 +916,59 @@
 					}
 				}
 			},
-			"api-v1-dispenser-dispenserId-1160846675": {
-				"type": "object",
-				"properties": {
-					"patientId": {
-						"type": "number",
-						"description": "환자 ID"
-					}
-				}
-			},
-			"api-v1-cartridge-cartridgeId-reminder-1638760233": {
-				"type": "object",
-				"properties": {
-					"schedules": {
-						"type": "array",
-						"items": {
-							"type": "object",
-							"properties": {
-								"dayOfWeek": {
-									"type": "string",
-									"description": "요일 (MON, TUE, WED, THU, FRI, SAT, SUN)"
-								},
-								"time": {
-									"type": "string",
-									"description": "시간 (HH:mm:ss)"
-								}
-							}
-						}
-					}
-				}
-			},
-			"api-v1-drug-autocomplete1841069625": {
+			"api-v1-patient-637801896": {
 				"type": "object",
 				"properties": {
 					"data": {
 						"type": "object",
 						"properties": {
-							"names": {
+							"id": {
+								"type": "number",
+								"description": "생성된 환자 ID"
+							}
+						}
+					},
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			},
+			"api-v1-sound-1671860611": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"properties": {
+							"sounds": {
 								"type": "array",
-								"description": "검색 결과",
 								"items": {
-									"oneOf": [
-										{
-											"type": "object"
+									"type": "object",
+									"properties": {
+										"name": {
+											"type": "string",
+											"description": "알림음 이름"
 										},
-										{
-											"type": "boolean"
+										"id": {
+											"type": "number",
+											"description": "알림음 id"
 										},
-										{
-											"type": "string"
-										},
-										{
-											"type": "number"
+										"url": {
+											"type": "string",
+											"description": "알림음 url"
 										}
-									]
+									}
 								}
 							},
 							"count": {
 								"type": "number",
-								"description": "총 검색 결과"
+								"description": "알림음 개수"
 							}
-						},
-						"description": "응답 데이터"
+						}
 					},
 					"timestamp": {
 						"type": "string",
@@ -971,30 +980,7 @@
 					}
 				}
 			},
-			"api-v1-user-name-852606423": {
-				"type": "object",
-				"properties": {
-					"data": {
-						"type": "object",
-						"properties": {
-							"name": {
-								"type": "string",
-								"description": "이름"
-							}
-						},
-						"description": "응답 데이터"
-					},
-					"timestamp": {
-						"type": "string",
-						"description": "응답 시간"
-					},
-					"status": {
-						"type": "string",
-						"description": "응답 상태"
-					}
-				}
-			},
-			"api-v1-drug1892022317": {
+			"api-v1-drug2071534301": {
 				"type": "object",
 				"properties": {
 					"data": {
@@ -1044,8 +1030,7 @@
 								"type": "number",
 								"description": "두꼐"
 							}
-						},
-						"description": "응답 데이터"
+						}
 					},
 					"timestamp": {
 						"type": "string",
@@ -1057,22 +1042,17 @@
 					}
 				}
 			},
-			"api-v1-auth-kakao-refresh-492983401": {
+			"api-v1-cartridge916321208": {
 				"type": "object",
 				"properties": {
 					"data": {
 						"type": "object",
 						"properties": {
-							"accessToken": {
-								"type": "string",
-								"description": "인증토큰"
-							},
-							"refreshToken": {
-								"type": "string",
-								"description": "리프레시 토큰 (기존 리프레시 토큰의 유효기간이 1개월 미만인 경우에만 갱신)"
+							"id": {
+								"type": "number",
+								"description": "생성된 카트리지 ID"
 							}
-						},
-						"description": "응답 데이터"
+						}
 					},
 					"timestamp": {
 						"type": "string",
@@ -1084,38 +1064,179 @@
 					}
 				}
 			},
-			"api-v1-sound-1851372595": {
+			"api-v1-user-1258169084": {
 				"type": "object",
 				"properties": {
 					"data": {
 						"type": "object",
 						"properties": {
-							"sounds": {
+							"name": {
+								"type": "string",
+								"description": "이름"
+							},
+							"profileImage": {
+								"type": "string",
+								"description": "프로필 이미지"
+							}
+						}
+					},
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			},
+			"api-v1-cartridge-cartridgeId-reminder-1638760233": {
+				"type": "object",
+				"properties": {
+					"schedules": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"dayOfWeek": {
+									"type": "string",
+									"description": "요일 (MON, TUE, WED, THU, FRI, SAT, SUN)"
+								},
+								"time": {
+									"type": "string",
+									"description": "시간 (HH:mm:ss)"
+								}
+							}
+						}
+					}
+				}
+			},
+			"api-v1-cartridge-cartridgeId-1776866862": {
+				"type": "object",
+				"properties": {
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			},
+			"api-v1-drug-autocomplete-1131437847": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"properties": {
+							"names": {
 								"type": "array",
+								"description": "검색 결과",
 								"items": {
-									"type": "object",
-									"properties": {
-										"name": {
-											"type": "string",
-											"description": "알림음 이름"
+									"oneOf": [
+										{
+											"type": "object"
 										},
-										"id": {
-											"type": "number",
-											"description": "알림음 id"
+										{
+											"type": "boolean"
 										},
-										"url": {
-											"type": "string",
-											"description": "알림음 url"
+										{
+											"type": "string"
+										},
+										{
+											"type": "number"
 										}
-									}
+									]
 								}
 							},
 							"count": {
 								"type": "number",
-								"description": "알림음 개수"
+								"description": "총 검색 결과"
 							}
-						},
-						"description": "응답 데이터"
+						}
+					},
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			},
+			"api-v1-cartridge-using-dispenserId1293555252": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"properties": {
+							"usingNumbers": {
+								"type": "array",
+								"description": "사용중인 번호",
+								"items": {
+									"oneOf": [
+										{
+											"type": "object"
+										},
+										{
+											"type": "boolean"
+										},
+										{
+											"type": "string"
+										},
+										{
+											"type": "number"
+										}
+									]
+								}
+							}
+						}
+					},
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			},
+			"api-v1-user-name-1490293479": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string",
+								"description": "이름"
+							}
+						}
+					},
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			},
+			"api-v1-cartridge-cartridgeId-reminder-1719529968": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"properties": {
+							"id": {
+								"type": "number",
+								"description": "등록된 카트리지 ID"
+							}
+						}
 					},
 					"timestamp": {
 						"type": "string",
@@ -1176,7 +1297,81 @@
 					}
 				}
 			},
-			"api-v1-drug-all-1699241152": {
+			"api-v1-auth-kakao-refresh829476423": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"properties": {
+							"accessToken": {
+								"type": "string",
+								"description": "인증토큰"
+							},
+							"refreshToken": {
+								"type": "string",
+								"description": "리프레시 토큰 (기존 리프레시 토큰의 유효기간이 1개월 미만인 경우에만 갱신)"
+							}
+						}
+					},
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			},
+			"api-v1-drug-check-dispenserId-1700343202": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"properties": {
+							"isCombinable": {
+								"type": "boolean",
+								"description": "혼용 가능 여부"
+							},
+							"caution": {
+								"type": "string",
+								"description": "주의사항"
+							}
+						}
+					},
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			},
+			"api-v1-cartridge-cartridgeId-reminder-800630051": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"properties": {
+							"id": {
+								"type": "number",
+								"description": "알람이 삭제된 카트리지 ID"
+							}
+						}
+					},
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			},
+			"api-v1-drug-all646786864": {
 				"type": "object",
 				"properties": {
 					"data": {
@@ -1238,143 +1433,7 @@
 								"type": "number",
 								"description": "검색 약 수"
 							}
-						},
-						"description": "응답 데이터"
-					},
-					"timestamp": {
-						"type": "string",
-						"description": "응답 시간"
-					},
-					"status": {
-						"type": "string",
-						"description": "응답 상태"
-					}
-				}
-			},
-			"api-v1-cartridge-using-dispenserId2094811716": {
-				"type": "object",
-				"properties": {
-					"data": {
-						"type": "object",
-						"properties": {
-							"usingNumbers": {
-								"type": "array",
-								"description": "사용중인 번호",
-								"items": {
-									"oneOf": [
-										{
-											"type": "object"
-										},
-										{
-											"type": "boolean"
-										},
-										{
-											"type": "string"
-										},
-										{
-											"type": "number"
-										}
-									]
-								}
-							}
-						},
-						"description": "응답 데이터"
-					},
-					"timestamp": {
-						"type": "string",
-						"description": "응답 시간"
-					},
-					"status": {
-						"type": "string",
-						"description": "응답 상태"
-					}
-				}
-			},
-			"api-v1-cartridge-cartridgeId-reminder-980142035": {
-				"type": "object",
-				"properties": {
-					"data": {
-						"type": "object",
-						"properties": {
-							"id": {
-								"type": "number",
-								"description": "알람이 삭제된 카트리지 ID"
-							}
-						},
-						"description": "응답 데이터"
-					},
-					"timestamp": {
-						"type": "string",
-						"description": "응답 시간"
-					},
-					"status": {
-						"type": "string",
-						"description": "응답 상태"
-					}
-				}
-			},
-			"api-v1-dispenser-id379264576": {
-				"type": "object",
-				"properties": {
-					"data": {
-						"type": "object",
-						"properties": {
-							"id": {
-								"type": "string",
-								"description": "디스펜서 ID"
-							}
-						},
-						"description": "응답 데이터"
-					},
-					"timestamp": {
-						"type": "string",
-						"description": "응답 시간"
-					},
-					"status": {
-						"type": "string",
-						"description": "응답 상태"
-					}
-				}
-			},
-			"api-v1-drug-check-dispenserId-434786642": {
-				"type": "object",
-				"properties": {
-					"data": {
-						"type": "object",
-						"properties": {
-							"isCombinable": {
-								"type": "boolean",
-								"description": "혼용 가능 여부"
-							},
-							"caution": {
-								"type": "string",
-								"description": "주의사항"
-							}
-						},
-						"description": "응답 데이터"
-					},
-					"timestamp": {
-						"type": "string",
-						"description": "응답 시간"
-					},
-					"status": {
-						"type": "string",
-						"description": "응답 상태"
-					}
-				}
-			},
-			"api-v1-cartridge-cartridgeId-reminder1153274528": {
-				"type": "object",
-				"properties": {
-					"data": {
-						"type": "object",
-						"properties": {
-							"id": {
-								"type": "number",
-								"description": "등록된 카트리지 ID"
-							}
-						},
-						"description": "응답 데이터"
+						}
 					},
 					"timestamp": {
 						"type": "string",
@@ -1408,29 +1467,6 @@
 								}
 							]
 						}
-					}
-				}
-			},
-			"api-v1-patient-1783140632": {
-				"type": "object",
-				"properties": {
-					"data": {
-						"type": "object",
-						"properties": {
-							"id": {
-								"type": "number",
-								"description": "생성된 환자 ID"
-							}
-						},
-						"description": "응답 데이터"
-					},
-					"timestamp": {
-						"type": "string",
-						"description": "응답 시간"
-					},
-					"status": {
-						"type": "string",
-						"description": "응답 상태"
 					}
 				}
 			}
