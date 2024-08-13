@@ -2,7 +2,7 @@
 	"openapi": "3.0.1",
 	"info": {
 		"title": "Carewith API",
-		"description": "last updated : 2024-08-12 15:21:50<br/>live: https://kauth.kakao.com/oauth/authorize?client_id=b4b9c60f1b384cecdc2553fabafb3ec3&redirect_uri=https://api.carewith.life/api/v1/auth/kakao/local&response_type=code<br/>local: https://kauth.kakao.com/oauth/authorize?client_id=b4b9c60f1b384cecdc2553fabafb3ec3&redirect_uri=https://api.carewith.life/api/v1/auth/kakao/local&response_type=code",
+		"description": "last updated : 2024-08-13 04:36:18<br/>live: https://kauth.kakao.com/oauth/authorize?client_id=b4b9c60f1b384cecdc2553fabafb3ec3&redirect_uri=https://api.carewith.life/api/v1/auth/kakao/local&response_type=code<br/>local: https://kauth.kakao.com/oauth/authorize?client_id=b4b9c60f1b384cecdc2553fabafb3ec3&redirect_uri=https://api.carewith.life/api/v1/auth/kakao/local&response_type=code",
 		"version": "1.0.0-SNAPSHOT"
 	},
 	"servers": [
@@ -28,11 +28,11 @@
 					"content": {
 						"application/json;charset=utf-8": {
 							"schema": {
-								"$ref": "#/components/schemas/api-v1-cartridge1468055381"
+								"$ref": "#/components/schemas/api-v1-cartridge-1674032322"
 							},
 							"examples": {
 								"append-cartridge": {
-									"value": "{\"number\":1,\"memo\":\"memo\",\"dosage\":5.0,\"doesPerDay\":3,\"totalDoseDays\":7,\"drugRemains\":30,\"repeatable\":true,\"reminderTerm\":48,\"dispenserId\":\"MGE2NGZ\",\"drugId\":3,\"reminderSoundId\":1}"
+									"value": "{\"number\":1,\"memo\":\"memo\",\"dosage\":5.0,\"doesPerDay\":3,\"totalDoseDays\":7,\"drugRemains\":30,\"since\":\"2019-03-12\",\"repeatable\":true,\"reminderTerm\":48,\"dispenserId\":\"MGE2NGZ\",\"drugId\":3,\"reminderSoundId\":1}"
 								}
 							}
 						}
@@ -44,11 +44,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-cartridge-schedule916321208"
+									"$ref": "#/components/schemas/api-v1-cartridge916321208"
 								},
 								"examples": {
 									"append-cartridge": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 00:21:25\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 13:35:52\"}"
 									}
 								}
 							}
@@ -82,11 +82,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-dispenser940190644"
+									"$ref": "#/components/schemas/api-v1-dispenser-387986916"
 								},
 								"examples": {
 									"read-dispensers": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"dispensers\":[{\"dispenserId\":\"MGE2NGZ\",\"status\":\"MAIN\"},{\"dispenserId\":\"IF24KD\",\"status\":\"SUB\"}]},\"timestamp\":\"2024-08-13 00:21:26\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"dispensers\":[{\"dispenserId\":\"MGE2NGZ\",\"status\":\"MAIN\",\"name\":\"기기 이름\",\"location\":\"설치 장소\",\"volume\":80},{\"dispenserId\":\"IF24KD\",\"status\":\"SUB\",\"name\":\"기기 이름2\",\"location\":\"설치 장소2\",\"volume\":70}]},\"timestamp\":\"2024-08-13 13:35:53\"}"
 									}
 								}
 							}
@@ -123,7 +123,7 @@
 								},
 								"examples": {
 									"search-drug-by-name": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"녹색의 원형 필름코팅정\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},\"timestamp\":\"2024-08-13 00:21:27\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"녹색의 원형 필름코팅정\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},\"timestamp\":\"2024-08-13 13:35:54\"}"
 									}
 								}
 							}
@@ -162,7 +162,7 @@
 								},
 								"examples": {
 									"all-reminder-sounds": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"sounds\":[{\"id\":1,\"name\":\"기본 알림음\",\"url\":\"url\"},{\"id\":2,\"name\":\"커스텀 알림음\",\"url\":\"url\"}]},\"timestamp\":\"2024-08-13 00:21:31\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"sounds\":[{\"id\":1,\"name\":\"기본 알림음\",\"url\":\"url\"},{\"id\":2,\"name\":\"커스텀 알림음\",\"url\":\"url\"}]},\"timestamp\":\"2024-08-13 13:35:58\"}"
 									}
 								}
 							}
@@ -201,7 +201,7 @@
 								},
 								"examples": {
 									"append-reminder-sound": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 00:21:31\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 13:35:58\"}"
 									}
 								}
 							}
@@ -239,7 +239,7 @@
 								},
 								"examples": {
 									"read-user": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"name\":\"김태완\",\"profileImage\":\"profileImage\"},\"timestamp\":\"2024-08-13 00:21:32\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"name\":\"김태완\",\"profileImage\":\"profileImage\"},\"timestamp\":\"2024-08-13 13:35:59\"}"
 									}
 								}
 							}
@@ -259,11 +259,11 @@
 					"content": {
 						"application/json;charset=utf-8": {
 							"schema": {
-								"$ref": "#/components/schemas/api-v1-cartridge-schedule-2116590121"
+								"$ref": "#/components/schemas/api-v1-cartridge-schedule-963710528"
 							},
 							"examples": {
 								"append-cartridge-reminder-schedule": {
-									"value": "{\"number\":1,\"memo\":\"memo\",\"dosage\":5.0,\"doesPerDay\":3,\"totalDoseDays\":7,\"drugRemains\":30,\"repeatable\":true,\"dispenserId\":\"MGE2NGZ\",\"drugId\":3,\"reminderSoundId\":1,\"schedules\":[{\"dayOfWeek\":\"MON\",\"time\":\"12:00:00\"},{\"dayOfWeek\":\"MON\",\"time\":\"18:00:00\"},{\"dayOfWeek\":\"WED\",\"time\":\"12:00:00\"},{\"dayOfWeek\":\"WED\",\"time\":\"18:00:00\"}]}"
+									"value": "{\"number\":1,\"memo\":\"memo\",\"dosage\":5.0,\"doesPerDay\":3,\"totalDoseDays\":7,\"drugRemains\":30,\"since\":\"2019-03-12\",\"repeatable\":true,\"dispenserId\":\"MGE2NGZ\",\"drugId\":3,\"reminderSoundId\":1,\"schedules\":[{\"dayOfWeek\":\"MON\",\"time\":\"12:00:00\"},{\"dayOfWeek\":\"MON\",\"time\":\"18:00:00\"},{\"dayOfWeek\":\"WED\",\"time\":\"12:00:00\"},{\"dayOfWeek\":\"WED\",\"time\":\"18:00:00\"}]}"
 								}
 							}
 						}
@@ -275,11 +275,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-cartridge-schedule916321208"
+									"$ref": "#/components/schemas/api-v1-cartridge916321208"
 								},
 								"examples": {
 									"append-cartridge-reminder-schedule": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 00:21:24\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 13:35:51\"}"
 									}
 								}
 							}
@@ -316,7 +316,7 @@
 								},
 								"examples": {
 									"remove-cartridges": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":null,\"timestamp\":\"2024-08-13 00:21:25\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":null,\"timestamp\":\"2024-08-13 13:35:51\"}"
 									}
 								}
 							}
@@ -345,11 +345,11 @@
 					"content": {
 						"application/json;charset=utf-8": {
 							"schema": {
-								"$ref": "#/components/schemas/api-v1-cartridge-cartridgeId609100937"
+								"$ref": "#/components/schemas/api-v1-cartridge-cartridgeId1761980530"
 							},
 							"examples": {
 								"modify-cartridge": {
-									"value": "{\"number\":1,\"memo\":\"memo\",\"dosage\":5.0,\"doesPerDay\":3,\"totalDoseDays\":7,\"drugRemains\":30,\"repeatable\":true,\"reminderTerm\":48}"
+									"value": "{\"number\":1,\"memo\":\"memo\",\"dosage\":5.0,\"doesPerDay\":3,\"since\":\"2019-03-12\",\"totalDoseDays\":7,\"drugRemains\":30,\"repeatable\":true,\"reminderTerm\":48}"
 								}
 							}
 						}
@@ -361,11 +361,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-cartridge-schedule916321208"
+									"$ref": "#/components/schemas/api-v1-cartridge916321208"
 								},
 								"examples": {
 									"modify-cartridge": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 00:21:24\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 13:35:51\"}"
 									}
 								}
 							}
@@ -388,11 +388,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-dispenser-dispenserId-1846498768"
+									"$ref": "#/components/schemas/api-v1-dispenser-id-1846498768"
 								},
 								"examples": {
 									"generate-dispenser-id": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":\"MGE2NGZ\"},\"timestamp\":\"2024-08-13 00:21:26\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":\"MGE2NGZ\"},\"timestamp\":\"2024-08-13 13:35:53\"}"
 									}
 								}
 							}
@@ -426,11 +426,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-dispenser-main-754956385"
+									"$ref": "#/components/schemas/api-v1-dispenser-dispenserId-253682153"
 								},
 								"examples": {
 									"read-main-dispenser": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"dispenserId\":\"MGE2NGZ\",\"status\":\"MAIN\"},\"timestamp\":\"2024-08-13 00:21:26\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"dispenserId\":\"MGE2NGZ\",\"status\":\"MAIN\",\"name\":\"기기 이름\",\"location\":\"설치 장소\",\"volume\":80},\"timestamp\":\"2024-08-13 13:35:53\"}"
 									}
 								}
 							}
@@ -440,6 +440,41 @@
 			}
 		},
 		"/api/v1/dispenser/{dispenserId}": {
+			"get": {
+				"tags": [
+					"dispenser"
+				],
+				"summary": "디스펜서 조회 API",
+				"operationId": "read-dispenser",
+				"parameters": [
+					{
+						"name": "dispenserId",
+						"in": "path",
+						"description": "조회 디스펜서 이름",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/api-v1-dispenser-dispenserId-253682153"
+								},
+								"examples": {
+									"read-dispenser": {
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"dispenserId\":\"MGE2NGZ\",\"status\":\"MAIN\",\"name\":\"기기 이름\",\"location\":\"설치 장소\",\"volume\":80},\"timestamp\":\"2024-08-13 13:35:53\"}"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
 			"post": {
 				"tags": [
 					"dispenser"
@@ -488,11 +523,11 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/api-v1-dispenser-dispenserId-1846498768"
+									"$ref": "#/components/schemas/api-v1-dispenser-id-1846498768"
 								},
 								"examples": {
 									"register-dispenser": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":\"MGE2NGZ\"},\"timestamp\":\"2024-08-13 00:21:26\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":\"MGE2NGZ\"},\"timestamp\":\"2024-08-13 13:35:53\"}"
 									}
 								}
 							}
@@ -538,7 +573,7 @@
 								},
 								"examples": {
 									"all-drug": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"drugs\":[{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"어두운 황색의 원형 필름코팅정\",\"classification\":\"항악성종양제\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},{\"id\":2,\"name\":\"페라트라정2.5밀리그램(레트로졸)\",\"identifier\":200808877,\"produce\":\"(주)유한양행\",\"description\":\"녹색의 원형 필름코팅정\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":6.1,\"shortLength\":6.1,\"thick\":3.5,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300107\"}]},\"timestamp\":\"2024-08-13 00:21:27\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"drugs\":[{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"어두운 황색의 원형 필름코팅정\",\"classification\":\"항악성종양제\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},{\"id\":2,\"name\":\"페라트라정2.5밀리그램(레트로졸)\",\"identifier\":200808877,\"produce\":\"(주)유한양행\",\"description\":\"녹색의 원형 필름코팅정\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":6.1,\"shortLength\":6.1,\"thick\":3.5,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300107\"}]},\"timestamp\":\"2024-08-13 13:35:54\"}"
 									}
 								}
 							}
@@ -575,7 +610,7 @@
 								},
 								"examples": {
 									"auto-complete-drug-name": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":3,\"names\":[\"프레가스타캡슐150밀리그램(프레가발린)\",\"프레가스타캡슐300밀리그램(프레가발린)\",\"프레가스타캡슐75밀리그램(프레가발린)\"]},\"timestamp\":\"2024-08-13 00:21:28\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":3,\"names\":[\"프레가스타캡슐150밀리그램(프레가발린)\",\"프레가스타캡슐300밀리그램(프레가발린)\",\"프레가스타캡슐75밀리그램(프레가발린)\"]},\"timestamp\":\"2024-08-13 13:35:54\"}"
 									}
 								}
 							}
@@ -606,7 +641,7 @@
 					"content": {
 						"application/json;charset=utf-8": {
 							"schema": {
-								"$ref": "#/components/schemas/api-v1-patient-dispenserId-82408887"
+								"$ref": "#/components/schemas/api-v1-patient-patientId-82408887"
 							},
 							"examples": {
 								"append-patient": {
@@ -626,7 +661,7 @@
 								},
 								"examples": {
 									"append-patient": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 00:21:29\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 13:35:56\"}"
 									}
 								}
 							}
@@ -663,7 +698,7 @@
 								},
 								"examples": {
 									"read-patient": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1,\"name\":\"김태완\",\"birth\":\"2001-02-22\",\"diseaseName\":\"알츠하이머\",\"severity\":2},\"timestamp\":\"2024-08-13 00:21:29\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1,\"name\":\"김태완\",\"birth\":\"2001-02-22\",\"diseaseName\":\"알츠하이머\",\"severity\":2},\"timestamp\":\"2024-08-13 13:35:56\"}"
 									}
 								}
 							}
@@ -692,7 +727,7 @@
 					"content": {
 						"application/json;charset=utf-8": {
 							"schema": {
-								"$ref": "#/components/schemas/api-v1-patient-dispenserId-82408887"
+								"$ref": "#/components/schemas/api-v1-patient-patientId-82408887"
 							},
 							"examples": {
 								"modify-patient": {
@@ -712,7 +747,7 @@
 								},
 								"examples": {
 									"modify-patient": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 00:21:29\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 13:35:56\"}"
 									}
 								}
 							}
@@ -749,7 +784,7 @@
 								},
 								"examples": {
 									"provide-reminder-sound-pre-signed-url": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"preSignedUrl\":\"preSignedUrl.com\"},\"timestamp\":\"2024-08-13 00:21:31\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"preSignedUrl\":\"preSignedUrl.com\"},\"timestamp\":\"2024-08-13 13:35:58\"}"
 									}
 								}
 							}
@@ -787,7 +822,7 @@
 								},
 								"examples": {
 									"read-user-name": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"name\":\"김태완\"},\"timestamp\":\"2024-08-13 00:21:32\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"name\":\"김태완\"},\"timestamp\":\"2024-08-13 13:35:59\"}"
 									}
 								}
 							}
@@ -827,7 +862,7 @@
 								},
 								"examples": {
 									"refresh-token-API": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"accessToken\":\"accessToken\",\"refreshToken\":\"refreshToken?\"},\"timestamp\":\"2024-08-13 00:21:22\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"accessToken\":\"accessToken\",\"refreshToken\":\"refreshToken?\"},\"timestamp\":\"2024-08-13 13:35:49\"}"
 									}
 								}
 							}
@@ -864,7 +899,7 @@
 								},
 								"examples": {
 									"using-cartridges": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"usingNumbers\":[1,3,4]},\"timestamp\":\"2024-08-13 00:21:25\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"usingNumbers\":[1,3,4]},\"timestamp\":\"2024-08-13 13:35:52\"}"
 									}
 								}
 							}
@@ -915,7 +950,7 @@
 								},
 								"examples": {
 									"append-reminders": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 00:21:30\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 13:35:57\"}"
 									}
 								}
 							}
@@ -950,7 +985,7 @@
 								},
 								"examples": {
 									"remove-reminders": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 00:21:30\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 13:35:57\"}"
 									}
 								}
 							}
@@ -999,7 +1034,7 @@
 								},
 								"examples": {
 									"replace-reminders": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 00:21:30\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 13:35:57\"}"
 									}
 								}
 							}
@@ -1030,11 +1065,11 @@
 					"content": {
 						"application/json;charset=utf-8": {
 							"schema": {
-								"$ref": "#/components/schemas/api-v1-cartridge-cartridgeId-schedule1319422731"
+								"$ref": "#/components/schemas/api-v1-cartridge-cartridgeId-schedule-1822664972"
 							},
 							"examples": {
 								"modify-cartridge-reminder-schedule": {
-									"value": "{\"number\":1,\"memo\":\"memo\",\"dosage\":5.0,\"doesPerDay\":3,\"totalDoseDays\":7,\"drugRemains\":30,\"repeatable\":true,\"schedules\":[{\"dayOfWeek\":\"MON\",\"time\":\"12:00:00\"},{\"dayOfWeek\":\"MON\",\"time\":\"18:00:00\"},{\"dayOfWeek\":\"WED\",\"time\":\"12:00:00\"},{\"dayOfWeek\":\"WED\",\"time\":\"18:00:00\"}]}"
+									"value": "{\"number\":1,\"memo\":\"memo\",\"dosage\":5.0,\"doesPerDay\":3,\"totalDoseDays\":7,\"drugRemains\":30,\"since\":\"2019-03-12\",\"repeatable\":true,\"schedules\":[{\"dayOfWeek\":\"MON\",\"time\":\"12:00:00\"},{\"dayOfWeek\":\"MON\",\"time\":\"18:00:00\"},{\"dayOfWeek\":\"WED\",\"time\":\"12:00:00\"},{\"dayOfWeek\":\"WED\",\"time\":\"18:00:00\"}]}"
 								}
 							}
 						}
@@ -1050,7 +1085,7 @@
 								},
 								"examples": {
 									"modify-cartridge-reminder-schedule": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 00:21:24\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1},\"timestamp\":\"2024-08-13 13:35:51\"}"
 									}
 								}
 							}
@@ -1097,7 +1132,7 @@
 								},
 								"examples": {
 									"change-main-dispenser": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":\"IF24KD\"},\"timestamp\":\"2024-08-13 00:21:26\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":\"IF24KD\"},\"timestamp\":\"2024-08-13 13:35:53\"}"
 									}
 								}
 							}
@@ -1134,7 +1169,7 @@
 								},
 								"examples": {
 									"all-drug-by-keyword": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"drugs\":[{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"어두운 황색의 원형 필름코팅정\",\"classification\":\"항악성종양제\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},{\"id\":4,\"name\":\"가스프렌정(모사프리드시트르산염이수화물)\",\"identifier\":200809076,\"produce\":\"경동제약(주)\",\"description\":\"분할선을 가진 흰색의 장방형 필름코팅정제\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":9.1,\"shortLength\":4.5,\"thick\":3.4,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300143\"}]},\"timestamp\":\"2024-08-13 00:21:28\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"count\":2,\"drugs\":[{\"id\":1,\"name\":\"가스디알정50밀리그램(디메크로틴산마그네슘)\",\"identifier\":200808876,\"produce\":\"일동제약(주)\",\"description\":\"어두운 황색의 원형 필름코팅정\",\"classification\":\"항악성종양제\",\"division\":\"전문의약품\",\"longLength\":7.6,\"shortLength\":7.6,\"thick\":3.6,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104\"},{\"id\":4,\"name\":\"가스프렌정(모사프리드시트르산염이수화물)\",\"identifier\":200809076,\"produce\":\"경동제약(주)\",\"description\":\"분할선을 가진 흰색의 장방형 필름코팅정제\",\"classification\":\"기타의 소화기관용약\",\"division\":\"전문의약품\",\"longLength\":9.1,\"shortLength\":4.5,\"thick\":3.4,\"imageUrl\":\"https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300143\"}]},\"timestamp\":\"2024-08-13 13:35:55\"}"
 									}
 								}
 							}
@@ -1185,7 +1220,7 @@
 								},
 								"examples": {
 									"drug-combinable-check": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"isCombinable\":true,\"caution\":\"주의사항\"},\"timestamp\":\"2024-08-13 00:21:28\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"isCombinable\":true,\"caution\":\"주의사항\"},\"timestamp\":\"2024-08-13 13:35:55\"}"
 									}
 								}
 							}
@@ -1236,7 +1271,7 @@
 								},
 								"examples": {
 									"read-patient-by-dispenser-id": {
-										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1,\"name\":\"김태완\",\"birth\":\"2001-02-22\",\"diseaseName\":\"알츠하이머\",\"severity\":2},\"timestamp\":\"2024-08-13 00:21:29\"}"
+										"value": "{\"status\":\"SUCCESS\",\"data\":{\"id\":1,\"name\":\"김태완\",\"birth\":\"2001-02-22\",\"diseaseName\":\"알츠하이머\",\"severity\":2},\"timestamp\":\"2024-08-13 13:35:56\"}"
 									}
 								}
 							}
@@ -1248,7 +1283,7 @@
 	},
 	"components": {
 		"schemas": {
-			"api-v1-dispenser-dispenserId-1846498768": {
+			"api-v1-dispenser-id-1846498768": {
 				"type": "object",
 				"properties": {
 					"data": {
@@ -1270,64 +1305,66 @@
 					}
 				}
 			},
-			"api-v1-cartridge-schedule-2116590121": {
+			"api-v1-dispenser-387986916": {
 				"type": "object",
 				"properties": {
-					"totalDoseDays": {
-						"type": "number",
-						"description": "총 투약 일수"
-					},
-					"dosage": {
-						"type": "number",
-						"description": "투여량"
-					},
-					"number": {
-						"type": "number",
-						"description": "카트리지 번호"
-					},
-					"reminderSoundId": {
-						"type": "number",
-						"description": "알람 사운드 ID"
-					},
-					"dispenserId": {
-						"type": "string",
-						"description": "디스펜서 ID"
-					},
-					"repeatable": {
-						"type": "boolean",
-						"description": "반복알림 여부"
-					},
-					"schedules": {
-						"type": "array",
-						"items": {
-							"type": "object",
-							"properties": {
-								"dayOfWeek": {
-									"type": "string",
-									"description": "요일 (MON, TUE, WED, THU, FRI, SAT, SUN)"
-								},
-								"time": {
-									"type": "string",
-									"description": "시간 (HH:mm:ss)"
+					"data": {
+						"type": "object",
+						"properties": {
+							"count": {
+								"type": "number",
+								"description": "목록 갯수"
+							},
+							"dispensers": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"volume": {
+											"type": "number",
+											"description": "디스펜서 볼륨"
+										},
+										"dispenserId": {
+											"type": "string",
+											"description": "디스펜서 ID"
+										},
+										"name": {
+											"type": "string",
+											"description": "디스펜서 이름"
+										},
+										"location": {
+											"type": "string",
+											"description": "디스펜서 설치 장소"
+										},
+										"status": {
+											"type": "string",
+											"description": "디스펜서 상태 (MAIN, SUB)"
+										}
+									}
 								}
 							}
 						}
 					},
-					"drugRemains": {
-						"type": "number",
-						"description": "남은 알약 갯수"
-					},
-					"memo": {
+					"timestamp": {
 						"type": "string",
-						"description": "메모"
+						"description": "응답 시간"
 					},
-					"drugId": {
-						"type": "number",
-						"description": "약 ID"
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			},
+			"api-v1-cartridge-cartridgeId-1776866862": {
+				"type": "object",
+				"properties": {
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
 					},
-					"doesPerDay": {
-						"type": "number",
-						"description": "1일 투여 횟수"
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
 					}
 				}
 			},
@@ -1349,19 +1386,6 @@
 								}
 							}
 						}
-					}
-				}
-			},
-			"api-v1-cartridge-cartridgeId-1776866862": {
-				"type": "object",
-				"properties": {
-					"timestamp": {
-						"type": "string",
-						"description": "응답 시간"
-					},
-					"status": {
-						"type": "string",
-						"description": "응답 상태"
 					}
 				}
 			},
@@ -1388,6 +1412,59 @@
 					"status": {
 						"type": "string",
 						"description": "응답 상태"
+					}
+				}
+			},
+			"api-v1-cartridge-1674032322": {
+				"type": "object",
+				"properties": {
+					"totalDoseDays": {
+						"type": "number",
+						"description": "총 투약 일수"
+					},
+					"dosage": {
+						"type": "number",
+						"description": "투여량"
+					},
+					"number": {
+						"type": "number",
+						"description": "카트리지 번호"
+					},
+					"reminderSoundId": {
+						"type": "number",
+						"description": "알람 사운드 ID"
+					},
+					"dispenserId": {
+						"type": "string",
+						"description": "디스펜서 ID"
+					},
+					"repeatable": {
+						"type": "boolean",
+						"description": "반복알림 여부"
+					},
+					"drugRemains": {
+						"type": "number",
+						"description": "남은 알약 갯수"
+					},
+					"memo": {
+						"type": "string",
+						"description": "메모"
+					},
+					"drugId": {
+						"type": "number",
+						"description": "약 ID"
+					},
+					"reminderTerm": {
+						"type": "number",
+						"description": "n일 간격 일시 시간 텀 (n 일 간격 외의 경우엔 -1, 시간(h))"
+					},
+					"since": {
+						"type": "string",
+						"description": "투약 시작 일"
+					},
+					"doesPerDay": {
+						"type": "number",
+						"description": "1일 투여 횟수"
 					}
 				}
 			},
@@ -1429,43 +1506,6 @@
 					}
 				}
 			},
-			"api-v1-cartridge-cartridgeId609100937": {
-				"type": "object",
-				"properties": {
-					"totalDoseDays": {
-						"type": "number",
-						"description": "총 투약 일수"
-					},
-					"dosage": {
-						"type": "number",
-						"description": "투여량"
-					},
-					"number": {
-						"type": "number",
-						"description": "카트리지 번호"
-					},
-					"repeatable": {
-						"type": "boolean",
-						"description": "반복알림 여부"
-					},
-					"drugRemains": {
-						"type": "number",
-						"description": "남은 알약 갯수"
-					},
-					"memo": {
-						"type": "string",
-						"description": "메모"
-					},
-					"reminderTerm": {
-						"type": "number",
-						"description": "n일 간격 일시 시간 텀 (n 일 간격 외의 경우엔 -1, 시간(h))"
-					},
-					"doesPerDay": {
-						"type": "number",
-						"description": "1일 투여 횟수"
-					}
-				}
-			},
 			"api-v1-sound-1608756656": {
 				"type": "object",
 				"properties": {
@@ -1488,29 +1528,7 @@
 					}
 				}
 			},
-			"api-v1-cartridge-cartridgeId-reminder-1719529968": {
-				"type": "object",
-				"properties": {
-					"data": {
-						"type": "object",
-						"properties": {
-							"id": {
-								"type": "number",
-								"description": "등록된 카트리지 ID"
-							}
-						}
-					},
-					"timestamp": {
-						"type": "string",
-						"description": "응답 시간"
-					},
-					"status": {
-						"type": "string",
-						"description": "응답 상태"
-					}
-				}
-			},
-			"api-v1-cartridge1468055381": {
+			"api-v1-cartridge-schedule-963710528": {
 				"type": "object",
 				"properties": {
 					"totalDoseDays": {
@@ -1537,6 +1555,22 @@
 						"type": "boolean",
 						"description": "반복알림 여부"
 					},
+					"schedules": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"dayOfWeek": {
+									"type": "string",
+									"description": "요일 (MON, TUE, WED, THU, FRI, SAT, SUN)"
+								},
+								"time": {
+									"type": "string",
+									"description": "시간 (HH:mm:ss)"
+								}
+							}
+						}
+					},
 					"drugRemains": {
 						"type": "number",
 						"description": "남은 알약 갯수"
@@ -1549,13 +1583,35 @@
 						"type": "number",
 						"description": "약 ID"
 					},
-					"reminderTerm": {
-						"type": "number",
-						"description": "n일 간격 일시 시간 텀 (n 일 간격 외의 경우엔 -1, 시간(h))"
+					"since": {
+						"type": "string",
+						"description": "투약 시작 일"
 					},
 					"doesPerDay": {
 						"type": "number",
 						"description": "1일 투여 횟수"
+					}
+				}
+			},
+			"api-v1-cartridge-cartridgeId-reminder-1719529968": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"properties": {
+							"id": {
+								"type": "number",
+								"description": "등록된 카트리지 ID"
+							}
+						}
+					},
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
 					}
 				}
 			},
@@ -1581,36 +1637,7 @@
 					}
 				}
 			},
-			"api-v1-patient-dispenser-dispenserId486549215": {
-				"type": "object"
-			},
-			"api-v1-dispenser-main-754956385": {
-				"type": "object",
-				"properties": {
-					"data": {
-						"type": "object",
-						"properties": {
-							"dispenserId": {
-								"type": "string",
-								"description": "디스펜서 ID"
-							},
-							"status": {
-								"type": "string",
-								"description": "디스펜서 상태 (MAIN, SUB)"
-							}
-						}
-					},
-					"timestamp": {
-						"type": "string",
-						"description": "응답 시간"
-					},
-					"status": {
-						"type": "string",
-						"description": "응답 상태"
-					}
-				}
-			},
-			"api-v1-patient-dispenserId-82408887": {
+			"api-v1-patient-patientId-82408887": {
 				"type": "object",
 				"properties": {
 					"severity": {
@@ -1630,6 +1657,9 @@
 						"description": "환자 생일 (yyyy-MM-dd)"
 					}
 				}
+			},
+			"api-v1-patient-dispenser-dispenserId486549215": {
+				"type": "object"
 			},
 			"api-v1-patient-dispenserId-637801896": {
 				"type": "object",
@@ -1757,15 +1787,15 @@
 					}
 				}
 			},
-			"api-v1-dispenser-main-dispenserId-687781852": {
+			"api-v1-patient-patientId370834879": {
 				"type": "object",
 				"properties": {
 					"data": {
 						"type": "object",
 						"properties": {
 							"id": {
-								"type": "string",
-								"description": "교체된 메인 디스펜서 ID"
+								"type": "number",
+								"description": "수정된 환자 ID"
 							}
 						}
 					},
@@ -1779,7 +1809,7 @@
 					}
 				}
 			},
-			"api-v1-cartridge-schedule916321208": {
+			"api-v1-cartridge916321208": {
 				"type": "object",
 				"properties": {
 					"data": {
@@ -1801,15 +1831,15 @@
 					}
 				}
 			},
-			"api-v1-patient-patientId370834879": {
+			"api-v1-dispenser-main-dispenserId-687781852": {
 				"type": "object",
 				"properties": {
 					"data": {
 						"type": "object",
 						"properties": {
 							"id": {
-								"type": "number",
-								"description": "수정된 환자 ID"
+								"type": "string",
+								"description": "교체된 메인 디스펜서 ID"
 							}
 						}
 					},
@@ -1891,6 +1921,59 @@
 					}
 				}
 			},
+			"api-v1-cartridge-cartridgeId-schedule-1822664972": {
+				"type": "object",
+				"properties": {
+					"totalDoseDays": {
+						"type": "number",
+						"description": "총 투약 일수"
+					},
+					"dosage": {
+						"type": "number",
+						"description": "투여량"
+					},
+					"number": {
+						"type": "number",
+						"description": "카트리지 번호"
+					},
+					"repeatable": {
+						"type": "boolean",
+						"description": "반복알림 여부"
+					},
+					"schedules": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"dayOfWeek": {
+									"type": "string",
+									"description": "요일 (MON, TUE, WED, THU, FRI, SAT, SUN)"
+								},
+								"time": {
+									"type": "string",
+									"description": "시간 (HH:mm:ss)"
+								}
+							}
+						}
+					},
+					"drugRemains": {
+						"type": "number",
+						"description": "남은 알약 갯수"
+					},
+					"memo": {
+						"type": "string",
+						"description": "메모"
+					},
+					"since": {
+						"type": "string",
+						"description": "투약 시작 일"
+					},
+					"doesPerDay": {
+						"type": "number",
+						"description": "1일 투여 횟수"
+					}
+				}
+			},
 			"api-v1-cartridge-cartridgeId-schedule-1376283297": {
 				"type": "object",
 				"properties": {
@@ -1951,64 +2034,15 @@
 					}
 				}
 			},
-			"api-v1-cartridge-cartridgeId-schedule1319422731": {
-				"type": "object",
-				"properties": {
-					"totalDoseDays": {
-						"type": "number",
-						"description": "총 투약 일수"
-					},
-					"dosage": {
-						"type": "number",
-						"description": "투여량"
-					},
-					"number": {
-						"type": "number",
-						"description": "카트리지 번호"
-					},
-					"repeatable": {
-						"type": "boolean",
-						"description": "반복알림 여부"
-					},
-					"schedules": {
-						"type": "array",
-						"items": {
-							"type": "object",
-							"properties": {
-								"dayOfWeek": {
-									"type": "string",
-									"description": "요일 (MON, TUE, WED, THU, FRI, SAT, SUN)"
-								},
-								"time": {
-									"type": "string",
-									"description": "시간 (HH:mm:ss)"
-								}
-							}
-						}
-					},
-					"drugRemains": {
-						"type": "number",
-						"description": "남은 알약 갯수"
-					},
-					"memo": {
-						"type": "string",
-						"description": "메모"
-					},
-					"doesPerDay": {
-						"type": "number",
-						"description": "1일 투여 횟수"
-					}
-				}
-			},
-			"api-v1-sound-presignedurl739172668": {
+			"api-v1-user-name-1490293479": {
 				"type": "object",
 				"properties": {
 					"data": {
 						"type": "object",
 						"properties": {
-							"preSignedUrl": {
+							"name": {
 								"type": "string",
-								"description": "pre signed url"
+								"description": "이름"
 							}
 						}
 					},
@@ -2022,15 +2056,15 @@
 					}
 				}
 			},
-			"api-v1-user-name-1490293479": {
+			"api-v1-sound-presignedurl739172668": {
 				"type": "object",
 				"properties": {
 					"data": {
 						"type": "object",
 						"properties": {
-							"name": {
+							"preSignedUrl": {
 								"type": "string",
-								"description": "이름"
+								"description": "pre signed url"
 							}
 						}
 					},
@@ -2061,6 +2095,94 @@
 					}
 				}
 			},
+			"api-v1-dispenser-dispenserId-253682153": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"properties": {
+							"volume": {
+								"type": "number",
+								"description": "디스펜서 볼륨"
+							},
+							"dispenserId": {
+								"type": "string",
+								"description": "디스펜서 ID"
+							},
+							"name": {
+								"type": "string",
+								"description": "디스펜서 이름"
+							},
+							"location": {
+								"type": "string",
+								"description": "디스펜서 설치 장소"
+							},
+							"status": {
+								"type": "string",
+								"description": "디스펜서 상태 (MAIN, SUB)"
+							}
+						}
+					},
+					"timestamp": {
+						"type": "string",
+						"description": "응답 시간"
+					},
+					"status": {
+						"type": "string",
+						"description": "응답 상태"
+					}
+				}
+			},
+			"api-v1-cartridge-cartridgeId1761980530": {
+				"type": "object",
+				"properties": {
+					"totalDoseDays": {
+						"type": "number",
+						"description": "총 투약 일수"
+					},
+					"dosage": {
+						"type": "number",
+						"description": "투여량"
+					},
+					"number": {
+						"type": "number",
+						"description": "카트리지 번호"
+					},
+					"repeatable": {
+						"type": "boolean",
+						"description": "반복알림 여부"
+					},
+					"drugRemains": {
+						"type": "number",
+						"description": "남은 알약 갯수"
+					},
+					"memo": {
+						"type": "string",
+						"description": "메모"
+					},
+					"reminderTerm": {
+						"type": "number",
+						"description": "n일 간격 일시 시간 텀 (n 일 간격 외의 경우엔 -1, 시간(h))"
+					},
+					"since": {
+						"type": "string",
+						"description": "투약 시작 일"
+					},
+					"doesPerDay": {
+						"type": "number",
+						"description": "1일 투여 횟수"
+					}
+				}
+			},
+			"api-v1-sound1019430459": {
+				"type": "object",
+				"properties": {
+					"url": {
+						"type": "string",
+						"description": "presignedUrl 을 통해 생성된 url"
+					}
+				}
+			},
 			"api-v1-drug-check-dispenserId-1700343202": {
 				"type": "object",
 				"properties": {
@@ -2084,40 +2206,6 @@
 					"status": {
 						"type": "string",
 						"description": "응답 상태"
-					}
-				}
-			},
-			"api-v1-sound1019430459": {
-				"type": "object",
-				"properties": {
-					"url": {
-						"type": "string",
-						"description": "presignedUrl 을 통해 생성된 url"
-					}
-				}
-			},
-			"api-v1-drug-check-dispenserId-633689209": {
-				"type": "object",
-				"properties": {
-					"drugNames": {
-						"type": "array",
-						"description": "추가하려는 약 이름",
-						"items": {
-							"oneOf": [
-								{
-									"type": "object"
-								},
-								{
-									"type": "boolean"
-								},
-								{
-									"type": "string"
-								},
-								{
-									"type": "number"
-								}
-							]
-						}
 					}
 				}
 			},
@@ -2195,41 +2283,28 @@
 					}
 				}
 			},
-			"api-v1-dispenser940190644": {
+			"api-v1-drug-check-dispenserId-633689209": {
 				"type": "object",
 				"properties": {
-					"data": {
-						"type": "object",
-						"properties": {
-							"count": {
-								"type": "number",
-								"description": "목록 갯수"
-							},
-							"dispensers": {
-								"type": "array",
-								"items": {
-									"type": "object",
-									"properties": {
-										"dispenserId": {
-											"type": "string",
-											"description": "디스펜서 ID"
-										},
-										"status": {
-											"type": "string",
-											"description": "디스펜서 상태 (MAIN, SUB)"
-										}
-									}
+					"drugNames": {
+						"type": "array",
+						"description": "추가하려는 약 이름",
+						"items": {
+							"oneOf": [
+								{
+									"type": "object"
+								},
+								{
+									"type": "boolean"
+								},
+								{
+									"type": "string"
+								},
+								{
+									"type": "number"
 								}
-							}
+							]
 						}
-					},
-					"timestamp": {
-						"type": "string",
-						"description": "응답 시간"
-					},
-					"status": {
-						"type": "string",
-						"description": "응답 상태"
 					}
 				}
 			}
